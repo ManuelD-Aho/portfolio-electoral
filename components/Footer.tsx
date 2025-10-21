@@ -13,7 +13,7 @@ export function Footer() {
           <div className="font-semibold mb-3">Navigation</div>
           <ul className="space-y-2 text-sm">
             <li><Link href="/programme">Programme</Link></li>
-            <li><Link href="/sengager">S'engager</Link></li>
+            <li><Link href="/sengager">S&apos;engager</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </div>

@@ -14,7 +14,7 @@ export function Header() {
         </Link>
         <nav className="hidden md:flex gap-6 text-sm">
           <Link href="/programme" className="hover:opacity-80">Programme</Link>
-          <Link href="/sengager" className="hover:opacity-80">S'engager</Link>
+          <Link href="/sengager" className="hover:opacity-80">S&apos;engager</Link>
           <Link href="/contact" className="hover:opacity-80">Contact</Link>
         </nav>
         <div className="flex items-center gap-3">
