@@ -1,39 +1,29 @@
 export const site = {
-  name: 'En Marche Locale',
+  name: 'Jemima Irié | BDE MIAGE',
   urls: {
     base: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
   },
   candidate: {
-    fullName: 'Prénom Nom',
-    slogan: 'Pour une ville plus juste, plus verte, plus proche.',
-    position: 'Candidat·e à la Mairie',
-    party: 'Alliance Citoyenne',
-    location: 'Hôtel de Ville, 75000 Paris',
-    email: 'contact@campagne.fr',
-    phone: '+33 6 12 34 56 78'
+    fullName: 'IRIÉ Jemima',
+    slogan: 'L\'avenir, on ne l\'attend pas. On le crée.',
+    position: 'Candidate à la Présidence du BDE MIAGE',
+    party: 'Excellence, Cohésion, Innovation',
+    location: 'CESTIA MIAGE',
+    email: 'contact@iriejemima.fr',
+    phone: '+225 XX XX XX XX XX'
   },
   meta: {
-    description: 'Portfolio électoral moderne: programme, événements, équipe et engagement.',
-    keywords: ['campagne', 'élections', 'programme', 'bénévolat', 'dons']
+    description: 'Découvrez la vision et le programme de Jemima Irié pour dynamiser la vie étudiante et académique de la MIAGE.',
+    keywords: ['BDE', 'MIAGE', 'Jemima Irié', 'élections étudiantes', 'CESTIA', 'Excellence', 'Cohésion', 'Innovation']
   },
   social: {
     Twitter: 'https://twitter.com/',
     Facebook: 'https://facebook.com/',
-    Instagram: 'https://instagram.com/',
-    YouTube: 'https://youtube.com/',
-    TikTok: 'https://tiktok.com/'
-  },
-  donations: {
-    options: [
-      { label: 'Don unique', href: '#', description: 'Soutenez ponctuellement la campagne.' },
-      { label: 'Don mensuel', href: '#', description: 'Amplifiez durablement notre action.' },
-      { label: 'Autre montant', href: '#', description: 'Personnalisez votre contribution.' }
-    ],
-    legalNote: 'Les dons sont soumis à la réglementation en vigueur. Merci de votre soutien.'
+    Instagram: 'https://instagram.com/'
   },
   stats: [
-    { label: 'Bénévoles mobilisés', value: '1 200+' },
-    { label: 'Portes frappées', value: '80 000+' },
-    { label: 'Réunions citoyennes', value: '150+' }
+    { label: 'Années d\'engagement', value: '3' },
+    { label: 'Rôles clés occupés', value: '2' },
+    { label: 'Vision commune', value: '1' }
   ]
 }

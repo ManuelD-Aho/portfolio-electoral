@@ -2,45 +2,24 @@ import { Issue } from '@/lib/types'
 
 export const issues: Issue[] = [
   {
-    slug: 'ecologie',
-    title: 'Écologie et climat',
-    icon: '🌿',
-    summary: 'Plan de végétalisation, mobilités douces, rénovation énergétique.',
-    tags: ['Climat', 'Mobilités', 'Énergie']
+    slug: 'excellence-academique',
+    title: 'Excellence Académique',
+    icon: '🎓',
+    summary: 'Objectif validation en session 1, groupes d\'entraide, et préparation aux compétitions.',
+    tags: ['Réussite', 'Entraide', 'Compétences']
   },
   {
-    slug: 'sante',
-    title: 'Santé',
-    icon: '🩺',
-    summary: 'Renforcer l’accès aux soins de proximité et la prévention.',
-    tags: ['Prévention', 'Accès', 'Solidarité']
+    slug: 'vie-etudiante',
+    title: 'Vie Étudiante & Cohésion',
+    icon: '❤️',
+    summary: 'Renforcer l\'esprit d\'héritage entre promotions, organiser des tournois et journées solidaires.',
+    tags: ['Communauté', 'Solidarité', 'Héritage']
   },
   {
-    slug: 'education',
-    title: 'Éducation',
-    icon: '📚',
-    summary: 'Soutien scolaire, périscolaire de qualité, écoles rénovées.',
-    tags: ['Jeunesse', 'Écoles', 'Égalité des chances']
-  },
-  {
-    slug: 'securite',
-    title: 'Sécurité',
-    icon: '🛡️',
-    summary: 'Prévention, présence renforcée, médiation et éclairage public.',
-    tags: ['Prévention', 'Médiation']
-  },
-  {
-    slug: 'logement',
-    title: 'Logement',
-    icon: '🏘️',
-    summary: 'Rénovation thermique, lutte contre l’habitat indigne, logements abordables.',
-    tags: ['Rénovation', 'Abordable']
-  },
-  {
-    slug: 'economie-locale',
-    title: 'Économie locale',
-    icon: '🏪',
-    summary: 'Soutien aux commerces, circuits courts, emploi local.',
-    tags: ['Commerces', 'Circuits courts', 'Emploi']
+    slug: 'tremplin-professionnel',
+    title: 'Tremplin Professionnel',
+    icon: '💼',
+    summary: 'Visites d\'entreprises, ateliers CV, et création d\'un annuaire des Alumni pour un réseau solide.',
+    tags: ['Carrière', 'Réseau', 'Alumni']
   }
 ]

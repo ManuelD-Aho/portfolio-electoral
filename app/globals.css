@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,8 +14,9 @@ html, body {
 
 body {
   @apply bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 antialiased;
-  background-image: linear-gradient(to bottom, rgba(20,83,255,0.04), transparent),
-    linear-gradient(to top, rgba(255,51,102,0.04), transparent);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-image: linear-gradient(to bottom, rgba(138,43,226,0.04), transparent),
+    linear-gradient(to top, rgba(255,0,255,0.04), transparent);
 }
 
 .container {
@@ -21,7 +24,8 @@ body {
 }
 
 .glass {
-  @apply bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/20 dark:border-neutral-800/60 shadow-lg;
+  @apply bg-white/70 dark:bg-neutral-900/70 backdrop-blur-xl border shadow-lg;
+  border-image: linear-gradient(135deg, rgba(138,43,226,0.3), rgba(255,0,255,0.3), rgba(0,255,255,0.3)) 1;
 }
 
 .card {
@@ -29,23 +33,37 @@ body {
 }
 
 /* Typo */
-.h1 { @apply text-4xl md:text-6xl font-bold tracking-tight; }
-.h2 { @apply text-3xl md:text-4xl font-semibold tracking-tight; }
-.h3 { @apply text-2xl md:text-3xl font-semibold; }
+.h1 { 
+  @apply text-4xl md:text-6xl font-bold tracking-tight; 
+  font-family: 'Poppins', sans-serif;
+}
+.h2 { 
+  @apply text-3xl md:text-4xl font-semibold tracking-tight; 
+  font-family: 'Poppins', sans-serif;
+}
+.h3 { 
+  @apply text-2xl md:text-3xl font-semibold; 
+  font-family: 'Poppins', sans-serif;
+}
 .lead { @apply text-lg text-neutral-600 dark:text-neutral-300; }
+
+/* Text Glow Effect */
+.text-glow {
+  text-shadow: 0 0 20px rgba(138,43,226,0.5), 0 0 40px rgba(255,0,255,0.3);
+}
 
 /* Buttons */
 .btn {
   @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-medium transition;
 }
 .btn-primary {
-  @apply btn bg-brand text-white hover:bg-brand-dark;
+  @apply btn bg-brand text-white hover:bg-brand-dark shadow-lg shadow-brand/30;
 }
 .btn-outline {
   @apply btn border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800;
 }
 .btn-accent {
-  @apply btn bg-accent text-white hover:bg-accent-dark;
+  @apply btn bg-accent text-white hover:bg-accent-dark shadow-lg shadow-accent/30;
 }
 
 /* Fancy borders */
@@ -57,8 +75,8 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(120deg, #1453FF, #FF3366, #22C55E);
+  padding: 2px;
+  background: linear-gradient(135deg, #8A2BE2, #FF00FF, #00FFFF);
   -webkit-mask:
      linear-gradient(#000 0 0) content-box, 
      linear-gradient(#000 0 0);
