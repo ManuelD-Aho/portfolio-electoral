@@ -7,6 +7,9 @@
 /.next
 /out
 
+# cache
+/cache
+
 # env
 .env
 .env.*.local
