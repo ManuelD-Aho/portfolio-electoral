@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 12px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 antialiased;
+  background-image: linear-gradient(to bottom, rgba(20,83,255,0.04), transparent),
+    linear-gradient(to top, rgba(255,51,102,0.04), transparent);
+}
+
+.container {
+  @apply mx-auto max-w-7xl px-6;
+}
+
+.glass {
+  @apply bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/20 dark:border-neutral-800/60 shadow-lg;
+}
+
+.card {
+  @apply rounded-2xl p-6 glass;
+}
+
+/* Typo */
+.h1 { @apply text-4xl md:text-6xl font-bold tracking-tight; }
+.h2 { @apply text-3xl md:text-4xl font-semibold tracking-tight; }
+.h3 { @apply text-2xl md:text-3xl font-semibold; }
+.lead { @apply text-lg text-neutral-600 dark:text-neutral-300; }
+
+/* Buttons */
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-medium transition;
+}
+.btn-primary {
+  @apply btn bg-brand text-white hover:bg-brand-dark;
+}
+.btn-outline {
+  @apply btn border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800;
+}
+.btn-accent {
+  @apply btn bg-accent text-white hover:bg-accent-dark;
+}
+
+/* Fancy borders */
+.border-gradient {
+  position: relative;
+}
+.border-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(120deg, #1453FF, #FF3366, #22C55E);
+  -webkit-mask:
+     linear-gradient(#000 0 0) content-box, 
+     linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
