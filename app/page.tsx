@@ -45,7 +45,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}>
                 <Link href="/programme" className="btn-primary">Voir le Programme</Link>
-                <Link href="/sengager" className="btn-outline">S'engager</Link>
+                <Link href="/sengager" className="btn-outline">S&apos;engager</Link>
                 <Link href="#" className="btn-accent">Voter Jemima le 25 Octobre</Link>
               </motion.div>
               <StatGroup className="mt-10" />
@@ -87,10 +87,10 @@ export default function Home() {
       <Section title="Qui suis-je ?" subtitle="C'est en forgeant qu'on devient forgeron">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div className="space-y-4 text-neutral-600 dark:text-neutral-300">
-            <p>L'expérience, la vraie, ne s'acquiert pas dans les hauteurs ni avec des titres, mais sur le terrain, là où se construisent la conviction, la ténacité et l'engagement.</p>
-            <p>Je parle en connaissance de cause. Depuis trois ans, j'œuvre au cœur de la vie associative, d'abord comme déléguée, puis comme trésorière. Des titres, oui, mais surtout du travail : des projets portés, des défis relevés, des heures données sans compter.</p>
-            <p>J'ai souvent fait bien plus que ce que mon rôle exigeait, non par devoir, mais par passion, par amour du travail bien fait. Ceux qui ont travaillé à mes côtés le savent : je n'ai jamais cherché la lumière, seulement le résultat.</p>
-            <p className="font-semibold text-brand">Aujourd'hui, je peux le dire avec confiance : j'ai appris, j'ai grandi, et j'ai bâti ma légitimité sur le terrain.</p>
+            <p>L&apos;expérience, la vraie, ne s&apos;acquiert pas dans les hauteurs ni avec des titres, mais sur le terrain, là où se construisent la conviction, la ténacité et l&apos;engagement.</p>
+            <p>Je parle en connaissance de cause. Depuis trois ans, j&apos;œuvre au cœur de la vie associative, d&apos;abord comme déléguée, puis comme trésorière. Des titres, oui, mais surtout du travail : des projets portés, des défis relevés, des heures données sans compter.</p>
+            <p>J&apos;ai souvent fait bien plus que ce que mon rôle exigeait, non par devoir, mais par passion, par amour du travail bien fait. Ceux qui ont travaillé à mes côtés le savent : je n&apos;ai jamais cherché la lumière, seulement le résultat.</p>
+            <p className="font-semibold text-brand">Aujourd&apos;hui, je peux le dire avec confiance : j&apos;ai appris, j&apos;ai grandi, et j&apos;ai bâti ma légitimité sur le terrain.</p>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div className="card hover:shadow-xl transition-shadow">
