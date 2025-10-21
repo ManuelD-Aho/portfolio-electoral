@@ -13,6 +13,13 @@ html, body {
   scroll-behavior: smooth;
 }
 
+/* Smooth scroll with offset for sticky header */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-padding-top: 5rem;
+  }
+}
+
 body {
   @apply bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 antialiased;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
