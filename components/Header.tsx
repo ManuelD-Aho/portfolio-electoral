@@ -13,14 +13,13 @@ export function Header() {
           <div className="font-semibold">{site.name}</div>
         </Link>
         <nav className="hidden md:flex gap-6 text-sm">
-          <Link href="/issues" className="hover:opacity-80">Programme</Link>
-          <Link href="/events" className="hover:opacity-80">Événements</Link>
+          <Link href="/programme" className="hover:opacity-80">Programme</Link>
+          <Link href="/sengager" className="hover:opacity-80">S'engager</Link>
           <Link href="/contact" className="hover:opacity-80">Contact</Link>
-          <Link href="/volunteer" className="hover:opacity-80">Bénévolat</Link>
         </nav>
         <div className="flex items-center gap-3">
           <ThemeToggle />
-          <Link href="/donate" className="btn-primary text-sm py-2">Soutenir</Link>
+          <Link href="#vote" className="btn-primary text-sm py-2">Voter le 25 Oct</Link>
         </div>
       </div>
     </header>

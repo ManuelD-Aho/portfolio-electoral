@@ -12,9 +12,8 @@ export function Footer() {
         <div>
           <div className="font-semibold mb-3">Navigation</div>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/issues">Programme</Link></li>
-            <li><Link href="/events">Événements</Link></li>
-            <li><Link href="/volunteer">Bénévolat</Link></li>
+            <li><Link href="/programme">Programme</Link></li>
+            <li><Link href="/sengager">S'engager</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </div>
