@@ -7,6 +7,7 @@ import { site } from '@/lib/site'
 import { Section } from '@/components/Section'
 import { IssueCard } from '@/components/IssueCard'
 import { Newsletter } from '@/components/Newsletter'
+import { Timeline } from '@/components/Timeline'
 import { issues } from '@/data/issues'
 import { StatGroup } from '@/components/Stat'
 
@@ -115,6 +116,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </Section>
+
+      <Section className="bg-neutral-50 dark:bg-neutral-900/50">
+        <Timeline />
       </Section>
 
       <Section title="Restons Connectés" subtitle="Rejoignez le mouvement pour une MIAGE dynamique et unie.">
