@@ -38,42 +38,42 @@ export default function Home() {
 
   return (
     <>
-      <section className="relative overflow-hidden min-h-[90vh] md:min-h-[85vh] flex items-center">
+      <section className="relative overflow-hidden min-h-[92vh] md:min-h-[90vh] flex items-center">
         <div className="absolute inset-0 bg-mesh pointer-events-none" />
-        <div className="container py-20 md:py-24 lg:py-28">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div className="container py-24 md:py-32 lg:py-36">
+          <div className="grid md:grid-cols-2 gap-16 md:gap-20 lg:gap-24 items-center">
             <motion.div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
             >
               <motion.h1
-                  className="h1 text-glow text-4xl md:text-5xl lg:text-7xl mb-6"
+                  className="h1 text-glow mb-8"
                   variants={itemVariants}>
                 {site.candidate.fullName}
               </motion.h1>
               <motion.p 
-                className="lead mt-6 text-lg md:text-xl lg:text-2xl"
+                className="lead mt-6"
                 variants={itemVariants}>
                 {site.candidate.slogan}
               </motion.p>
               <motion.p 
-                className="text-xl md:text-2xl mt-4 text-brand font-semibold"
+                className="text-2xl md:text-3xl mt-6 text-brand font-semibold"
                 variants={itemVariants}>
                 Ensemble. 🌟
               </motion.p>
               <motion.div 
-                className="mt-10 flex flex-col sm:flex-row flex-wrap gap-4"
+                className="mt-12 flex flex-col sm:flex-row flex-wrap gap-4"
                 variants={itemVariants}>
-                <Button asChild size="lg" variant="default" className="w-full sm:w-auto">
+                <Button asChild size="lg" variant="default" className="w-full sm:w-auto shadow-lg shadow-brand/20 hover:shadow-xl hover:shadow-brand/30">
                   <Link href="/programme">Voir le Programme</Link>
                 </Button>
-                <Button asChild size="lg" variant="secondary" className="w-full sm:w-auto">
+                <Button asChild size="lg" variant="secondary" className="w-full sm:w-auto shadow-md hover:shadow-lg">
                   <Link href="#vote">Voter Jemima le 25 Octobre</Link>
                 </Button>
               </motion.div>
               <motion.div variants={itemVariants}>
-                <StatGroup className="mt-12" />
+                <StatGroup className="mt-16" />
               </motion.div>
             </motion.div>
             <motion.div 
@@ -86,7 +86,7 @@ export default function Home() {
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
             >
-              <div className="relative w-full aspect-[4/5] max-h-[60vh] md:max-h-none rounded-3xl overflow-hidden border-gradient">
+              <div className="relative w-full aspect-[4/5] max-h-[65vh] md:max-h-none rounded-3xl overflow-hidden border-gradient shadow-2xl">
                 <Image
                   src="/candidate.jpg"
                   alt={site.candidate.fullName}
@@ -130,114 +130,74 @@ export default function Home() {
         </motion.div>
       </Section>
 
-      <Section title="Qui suis-je ?" subtitle="C'est en forgeant qu'on devient forgeron">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+      <Section title="Qui suis-je ?" subtitle="L'expérience se forge sur le terrain">
+        <div className="grid md:grid-cols-2 gap-16 md:gap-20 items-start">
           <motion.div 
-            className="space-y-6 text-neutral-600 dark:text-neutral-400 leading-relaxed"
+            className="space-y-8"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <motion.p
+            <motion.div
+              className="card p-8 bg-gradient-to-br from-brand/5 to-accent/5"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1, duration: 0.5 }}
             >
-              En d&apos;autres termes, l&apos;expérience, la vraie, ne s&apos;acquiert pas dans les hauteurs ni à travers des titres honorifiques, mais bien sur le terrain, là où se construisent les convictions, là où se mesurent la ténacité et l&apos;engagement.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-            >
-              Car, soyons honnêtes, ce n&apos;est pas en s&apos;attribuant des mérites que l&apos;on apprend la valeur du travail, mais en se retroussant les manches, en agissant, en donnant de soi sans compter. Oui, c&apos;est après avoir véritablement œuvré, après avoir porté les projets de bout en bout, qu&apos;on peut prétendre observer, diriger, inspirer.
-            </motion.p>
-            <motion.p
+              <div className="flex items-start gap-4">
+                <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-brand to-accent flex items-center justify-center text-2xl flex-shrink-0 shadow-lg">
+                  🔨
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-3 text-brand">Le Terrain, Ma Formation</h4>
+                  <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                    Trois années comme déléguée, trésorière du BDE de transition : j&apos;ai appris dans l&apos;action, pas dans les titres.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="card p-8 bg-gradient-to-br from-accent/5 to-secondary/5"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              Et si je vous dis cela aujourd&apos;hui, c&apos;est parce que j&apos;ai, moi aussi, longtemps « charbonné », ou, pour le dire plus élégamment, j&apos;ai œuvré avec persévérance, conviction et passion. J&apos;ai bâti mon parcours au cœur même de l&apos;action, dans la vie associative, là où les réussites collectives se construisent souvent dans le silence et le dévouement.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-            >
-              Depuis trois années, j&apos;endosse avec fierté le rôle de déléguée, une responsabilité exigeante, souvent éprouvante, mais ô combien enrichissante.
-            </motion.p>
-            <motion.p
+              <div className="flex items-start gap-4">
+                <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-accent to-secondary flex items-center justify-center text-2xl flex-shrink-0 shadow-lg">
+                  💪
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-3 text-accent">Au-delà du Rôle</h4>
+                  <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                    Communicante, coordinatrice, exécutante : j&apos;ai fait plus que mon rôle par passion du travail bien fait.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="card p-8 bg-gradient-to-br from-secondary/5 to-brand/5"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              Et parce que l&apos;engagement, le vrai, ne se limite pas à ce qui est écrit sur le papier, j&apos;ai également assumé la fonction de trésorière. Trésorière, certes, mais aussi communicante, coordinatrice, conseillère, parfois même exécutante quand il le fallait.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6, duration: 0.5 }}
-            >
-              J&apos;ai souvent fait plus que ce que mon rôle exigeait, non pas par obligation, mais par amour du travail bien fait, par attachement à l&apos;équipe, et par respect pour les objectifs que nous nous étions fixés.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.7, duration: 0.5 }}
-            >
-              Ceux qui ont travaillé à mes côtés le savent : je n&apos;ai jamais compté mes heures, ni attendu les félicitations avant d&apos;agir. Pour moi, le véritable leadership ne se décrète pas, il se démontre dans les actes, dans la constance et dans la rigueur.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.8, duration: 0.5 }}
-            >
-              Peu à peu, j&apos;ai porté plusieurs casquettes, affronté plusieurs défis, et chaque expérience m&apos;a forgée.
-            </motion.p>
-            <motion.p 
-              className="font-semibold text-brand text-lg"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.9, duration: 0.5 }}
-            >
-              Aujourd&apos;hui, je peux le dire avec confiance : j&apos;ai appris, j&apos;ai grandi, et j&apos;ai bâti ma légitimité sur le terrain.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 1.0, duration: 0.5 }}
-            >
-              Oui, j&apos;ai les épaules assez solides pour porter plus haut les ambitions de notre communauté. Et si je me tiens devant vous aujourd&apos;hui, c&apos;est avec la conviction que servir, ce n&apos;est pas simplement occuper un poste : c&apos;est se donner pleinement, sincèrement, passionnément.
-            </motion.p>
-            <motion.p 
-              className="font-medium text-brand"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 1.1, duration: 0.5 }}
-            >
-              C&apos;est fort de ce vécu, de cette expérience et de cette passion que je me présente, prête à servir, à rassembler et à conduire notre BDE avec la même énergie, la même détermination et le même amour du travail bien fait.
-            </motion.p>
-            <motion.p 
-              className="text-sm italic text-neutral-500 dark:text-neutral-400 mt-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 1.2, duration: 0.5 }}
-            >
-              Trésorière pour le BDE de transition en 2024-2025, arrivée et déléguée depuis 2022
-            </motion.p>
+              <div className="flex items-start gap-4">
+                <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-secondary to-brand flex items-center justify-center text-2xl flex-shrink-0 shadow-lg">
+                  🌟
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-3 text-secondary">Légitimité Forgée</h4>
+                  <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                    Chaque défi m&apos;a forgée. Aujourd&apos;hui, prête à porter plus haut les ambitions de notre communauté.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
           <motion.div 
             className="grid grid-cols-2 gap-6"
@@ -247,18 +207,19 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
           >
             {[
-              { icon: '✨', title: 'Multitâche', desc: 'Gestion simultanée de multiples responsabilités' },
-              { icon: '⚡', title: 'Rigoureuse', desc: 'Précision et excellence dans chaque action' },
-              { icon: '🚀', title: 'Dynamique', desc: 'Énergie et proactivité au quotidien' },
-              { icon: '💪', title: 'Dévouée', desc: 'Engagement total pour la communauté' }
+              { icon: '✨', title: 'Multitâche', desc: 'Gestion de multiples responsabilités simultanées', gradient: 'from-brand/10 to-accent/10' },
+              { icon: '⚡', title: 'Rigoureuse', desc: 'Précision et excellence dans chaque action', gradient: 'from-accent/10 to-secondary/10' },
+              { icon: '🚀', title: 'Dynamique', desc: 'Énergie et proactivité au quotidien', gradient: 'from-secondary/10 to-brand/10' },
+              { icon: '💪', title: 'Dévouée', desc: 'Engagement total pour la communauté', gradient: 'from-brand/10 to-secondary/10' }
             ].map((item, index) => (
               <motion.div
                 key={item.title}
-                className="card hover:shadow-lg transition-shadow p-6"
+                className={`card hover:shadow-2xl transition-all p-8 bg-gradient-to-br ${item.gradient}`}
                 variants={itemVariants}
+                whileHover={{ scale: 1.05, y: -5 }}
               >
-                <div className="text-4xl mb-3">{item.icon}</div>
-                <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
+                <div className="text-5xl mb-4">{item.icon}</div>
+                <h4 className="font-bold text-xl mb-3">{item.title}</h4>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
