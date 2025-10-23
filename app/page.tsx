@@ -133,7 +133,7 @@ export default function Home() {
       </Section>
 
       <Section title="Qui suis-je ?" subtitle="C'est en forgeant qu'on devient forgeron">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-10 items-start">
           <motion.div 
             className="space-y-4 text-neutral-600 dark:text-neutral-300"
             initial={{ opacity: 0, x: -30 }}
@@ -147,7 +147,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.1, duration: 0.5 }}
             >
-              L&apos;expérience, la vraie, ne s&apos;acquiert pas dans les hauteurs ni avec des titres, mais sur le terrain, là où se construisent la conviction, la ténacité et l&apos;engagement.
+              En d&apos;autres termes, l&apos;expérience, la vraie, ne s&apos;acquiert pas dans les hauteurs ni à travers des titres honorifiques, mais bien sur le terrain, là où se construisent les convictions, là où se mesurent la ténacité et l&apos;engagement.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -155,7 +155,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              Je parle en connaissance de cause. Depuis trois ans, j&apos;œuvre au cœur de la vie associative, d&apos;abord comme déléguée, puis comme trésorière. Des titres, oui, mais surtout du travail : des projets portés, des défis relevés, des heures données sans compter.
+              Car, soyons honnêtes, ce n&apos;est pas en s&apos;attribuant des mérites que l&apos;on apprend la valeur du travail, mais en se retroussant les manches, en agissant, en donnant de soi sans compter. Oui, c&apos;est après avoir véritablement œuvré, après avoir porté les projets de bout en bout, qu&apos;on peut prétendre observer, diriger, inspirer.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -163,16 +163,82 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              J&apos;ai souvent fait bien plus que ce que mon rôle exigeait, non par devoir, mais par passion, par amour du travail bien fait. Ceux qui ont travaillé à mes côtés le savent : je n&apos;ai jamais cherché la lumière, seulement le résultat.
+              Et si je vous dis cela aujourd&apos;hui, c&apos;est parce que j&apos;ai, moi aussi, longtemps « charbonné », ou, pour le dire plus élégamment, j&apos;ai œuvré avec persévérance, conviction et passion. J&apos;ai bâti mon parcours au cœur même de l&apos;action, dans la vie associative, là où les réussites collectives se construisent souvent dans le silence et le dévouement.
             </motion.p>
-            <motion.p 
-              className="font-semibold text-brand"
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
+              Depuis trois années, j&apos;endosse avec fierté le rôle de déléguée, une responsabilité exigeante, souvent éprouvante, mais ô combien enrichissante.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
+              Et parce que l&apos;engagement, le vrai, ne se limite pas à ce qui est écrit sur le papier, j&apos;ai également assumé la fonction de trésorière. Trésorière, certes, mais aussi communicante, coordinatrice, conseillère, parfois même exécutante quand il le fallait.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+            >
+              J&apos;ai souvent fait plus que ce que mon rôle exigeait, non pas par obligation, mais par amour du travail bien fait, par attachement à l&apos;équipe, et par respect pour les objectifs que nous nous étions fixés.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.7, duration: 0.5 }}
+            >
+              Ceux qui ont travaillé à mes côtés le savent : je n&apos;ai jamais compté mes heures, ni attendu les félicitations avant d&apos;agir. Pour moi, le véritable leadership ne se décrète pas, il se démontre dans les actes, dans la constance et dans la rigueur.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.8, duration: 0.5 }}
+            >
+              Peu à peu, j&apos;ai porté plusieurs casquettes, affronté plusieurs défis, et chaque expérience m&apos;a forgée.
+            </motion.p>
+            <motion.p 
+              className="font-semibold text-brand text-lg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.9, duration: 0.5 }}
+            >
               Aujourd&apos;hui, je peux le dire avec confiance : j&apos;ai appris, j&apos;ai grandi, et j&apos;ai bâti ma légitimité sur le terrain.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1.0, duration: 0.5 }}
+            >
+              Oui, j&apos;ai les épaules assez solides pour porter plus haut les ambitions de notre communauté. Et si je me tiens devant vous aujourd&apos;hui, c&apos;est avec la conviction que servir, ce n&apos;est pas simplement occuper un poste : c&apos;est se donner pleinement, sincèrement, passionnément.
+            </motion.p>
+            <motion.p 
+              className="font-medium text-brand"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1.1, duration: 0.5 }}
+            >
+              C&apos;est fort de ce vécu, de cette expérience et de cette passion que je me présente, prête à servir, à rassembler et à conduire notre BDE avec la même énergie, la même détermination et le même amour du travail bien fait.
+            </motion.p>
+            <motion.p 
+              className="text-sm italic text-neutral-500 dark:text-neutral-400 mt-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1.2, duration: 0.5 }}
+            >
+              Trésorière pour le BDE de transition en 2024-2025, arrivée et déléguée depuis 2022
             </motion.p>
           </motion.div>
           <motion.div 
