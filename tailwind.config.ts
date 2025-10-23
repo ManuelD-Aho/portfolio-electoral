@@ -12,19 +12,19 @@ export default {
     extend: {
       colors: {
         brand: {
-          DEFAULT: '#FF8C00',
-          dark: '#CC7000',
-          light: '#FFE5CC'
+          DEFAULT: '#6366f1',
+          dark: '#4f46e5',
+          light: '#e0e7ff'
         },
         accent: {
-          DEFAULT: '#FFA500',
-          dark: '#E69500',
-          light: '#FFF0D9'
+          DEFAULT: '#8b5cf6',
+          dark: '#7c3aed',
+          light: '#ede9fe'
         },
         secondary: {
-          DEFAULT: '#FF7F50',
-          dark: '#E66840',
-          light: '#FFE4DB'
+          DEFAULT: '#ec4899',
+          dark: '#db2777',
+          light: '#fce7f3'
         },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -53,7 +53,7 @@ export default {
         'hero-grid':
           'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0)',
         'mesh':
-          'radial-gradient(1200px circle at 0% 0%, #FF8C0033, transparent 40%), radial-gradient(1000px circle at 100% 0%, #FFA50033, transparent 40%), radial-gradient(800px circle at 0% 100%, #FF7F5033, transparent 40%)'
+          'radial-gradient(1200px circle at 0% 0%, rgba(99, 102, 241, 0.08), transparent 40%), radial-gradient(1000px circle at 100% 0%, rgba(139, 92, 246, 0.08), transparent 40%), radial-gradient(800px circle at 0% 100%, rgba(236, 72, 153, 0.08), transparent 40%)'
       },
       keyframes: {
         'accordion-down': {

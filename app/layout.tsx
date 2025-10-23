@@ -2,7 +2,6 @@ import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata, Viewport } from 'next'
 import { site } from '@/lib/site'
-import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { FloatingActions } from '@/components/FloatingActions'
@@ -30,7 +29,7 @@ export const metadata: Metadata = {
   }
 }
 
-export const viewport: Viewport = { themeColor: '#8A2BE2' }
+export const viewport: Viewport = { themeColor: '#6366f1' }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -39,8 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider>
           <div className="relative">
             <Header />
-            <main className="pt-14 md:pt-16">{children}</main>
-            <Footer />
+            <main className="pt-16 md:pt-20">{children}</main>
             <FloatingActions />
           </div>
           <Analytics />
