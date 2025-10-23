@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider>
           <div className="relative">
             <Header />
-            <main>{children}</main>
+            <main className="pt-14 md:pt-16">{children}</main>
             <Footer />
             <FloatingActions />
           </div>

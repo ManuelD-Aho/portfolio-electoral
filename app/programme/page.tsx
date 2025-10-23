@@ -40,6 +40,14 @@ export default function ProgrammePage() {
           transition={{ duration: 0.6 }}
         >
           <motion.p 
+            className="text-lg font-medium text-neutral-700 dark:text-neutral-200"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.6 }}
+          >
+            Chers aînés, chers camarades,
+          </motion.p>
+          <motion.p 
             className="text-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
