@@ -7,7 +7,9 @@ import { site } from '@/lib/site'
 import { Section } from '@/components/Section'
 import { IssueCard } from '@/components/IssueCard'
 import { Newsletter } from '@/components/Newsletter'
-import { Timeline } from '@/components/Timeline'
+import { EnhancedTimeline } from '@/components/EnhancedTimeline'
+import { HorizontalTimeline } from '@/components/HorizontalTimeline'
+import { Button } from '@/components/ui/button'
 import { issues } from '@/data/issues'
 import { StatGroup } from '@/components/Stat'
 
@@ -38,43 +40,49 @@ export default function Home() {
 
   return (
     <>
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden min-h-[85vh] md:min-h-0">
         <div className="absolute inset-0 bg-mesh pointer-events-none" />
-        <div className="container py-20 md:py-28">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="container py-16 md:py-20 lg:py-28">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
             <motion.div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
             >
               <motion.h1
-                  className="h1 text-glow"
+                  className="h1 text-glow text-4xl md:text-5xl lg:text-6xl"
                   variants={itemVariants}>
                 {site.candidate.fullName}
               </motion.h1>
               <motion.p 
-                className="lead mt-4"
+                className="lead mt-4 text-base md:text-lg"
                 variants={itemVariants}>
                 {site.candidate.slogan}
               </motion.p>
               <motion.p 
-                className="text-lg mt-2 text-brand font-semibold"
+                className="text-lg md:text-xl mt-2 text-brand font-semibold"
                 variants={itemVariants}>
                 Ensemble. 🌟
               </motion.p>
               <motion.div 
-                className="mt-8 flex flex-wrap gap-3"
+                className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3"
                 variants={itemVariants}>
-                <Link href="/programme" className="btn-primary">Voir le Programme</Link>
-                <Link href="/sengager" className="btn-outline">S&apos;engager</Link>
-                <Link href="#" className="btn-accent">Voter Jemima le 25 Octobre</Link>
+                <Button asChild size="lg" variant="default" className="w-full sm:w-auto">
+                  <Link href="/programme">Voir le Programme</Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
+                  <Link href="/sengager">S&apos;engager</Link>
+                </Button>
+                <Button asChild size="lg" variant="secondary" className="w-full sm:w-auto">
+                  <Link href="#vote">Voter Jemima le 25 Octobre</Link>
+                </Button>
               </motion.div>
               <motion.div variants={itemVariants}>
                 <StatGroup className="mt-10" />
               </motion.div>
             </motion.div>
             <motion.div 
-              className="relative"
+              className="relative order-first md:order-last"
               initial={{ opacity: 0, scale: 0.9, x: 50 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ 
@@ -83,7 +91,7 @@ export default function Home() {
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
             >
-              <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden border-gradient">
+              <div className="relative w-full aspect-[4/5] max-h-[60vh] md:max-h-none rounded-3xl overflow-hidden border-gradient">
                 <Image
                   src="/candidate.jpg"
                   alt={site.candidate.fullName}
@@ -121,7 +129,9 @@ export default function Home() {
           viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.5 }}
         >
-          <Link href="/programme" className="btn-outline">Découvrir le programme complet</Link>
+          <Button asChild size="lg" variant="outline">
+            <Link href="/programme">Découvrir le programme complet</Link>
+          </Button>
         </motion.div>
       </Section>
 
@@ -196,7 +206,11 @@ export default function Home() {
       </Section>
 
       <Section className="bg-neutral-50 dark:bg-neutral-900/50">
-        <Timeline />
+        <EnhancedTimeline />
+      </Section>
+
+      <Section className="bg-gradient-to-br from-brand/5 via-accent/5 to-secondary/5">
+        <HorizontalTimeline />
       </Section>
 
       <Section title="Restons Connectés" subtitle="Rejoignez le mouvement pour une MIAGE dynamique et unie.">

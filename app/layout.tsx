@@ -5,6 +5,7 @@ import { site } from '@/lib/site'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { ThemeProvider } from '@/components/ThemeProvider'
+import { FloatingActions } from '@/components/FloatingActions'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Header />
             <main>{children}</main>
             <Footer />
+            <FloatingActions />
           </div>
           <Analytics />
         </ThemeProvider>
