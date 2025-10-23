@@ -60,7 +60,7 @@ function TimelineItem({ icon, title, period, description, skills, index, isLast 
                 initial={{ scaleY: 0 }}
                 animate={inView ? { scaleY: 1 } : {}}
                 transition={{ duration: 0.8, delay: index * 0.1 + 0.3 }}
-                className="w-1 h-full bg-gradient-to-b from-brand via-accent to-secondary origin-top"
+                className="w-1 h-full bg-gradient-to-b from-brand via-accent to-secondary origin-top rounded-full"
               />
             )}
           </div>
@@ -68,20 +68,20 @@ function TimelineItem({ icon, title, period, description, skills, index, isLast 
             initial={{ scale: 0 }}
             animate={inView ? { scale: 1 } : {}}
             transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-            className="relative z-10 w-16 h-16 rounded-full bg-gradient-to-br from-brand via-accent to-secondary flex items-center justify-center text-2xl shadow-2xl shadow-brand/50"
+            className="relative z-10 w-20 h-20 rounded-2xl bg-gradient-to-br from-brand via-accent to-secondary flex items-center justify-center text-3xl shadow-2xl shadow-brand/40"
           >
             <span className="relative z-10">{icon}</span>
             <motion.div
               animate={{
-                scale: [1, 1.3, 1],
-                opacity: [0.7, 0.3, 0.7],
+                scale: [1, 1.2, 1],
+                opacity: [0.5, 0.2, 0.5],
               }}
               transition={{
-                duration: 2,
+                duration: 3,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute inset-0 rounded-full bg-gradient-to-br from-brand via-accent to-secondary"
+              className="absolute inset-0 rounded-2xl bg-gradient-to-br from-brand via-accent to-secondary"
             />
           </motion.div>
         </div>
@@ -148,7 +148,7 @@ function TimelineCard({
       <CardHeader>
         <div className={cn("flex items-center gap-3", mobile && "mb-2")}>
           {mobile && (
-            <span className="h-12 w-12 rounded-xl bg-gradient-to-br from-brand via-accent to-secondary grid place-items-center text-2xl shadow-lg flex-shrink-0">
+            <span className="h-14 w-14 rounded-2xl bg-gradient-to-br from-brand via-accent to-secondary grid place-items-center text-3xl shadow-lg flex-shrink-0">
               {icon}
             </span>
           )}
@@ -248,16 +248,16 @@ export function EnhancedTimeline() {
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
 
   return (
-    <div ref={containerRef} className="relative max-w-6xl mx-auto py-12">
+    <div ref={containerRef} className="relative max-w-6xl mx-auto py-16 md:py-20">
       {/* Title */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-20"
+        className="text-center mb-24 md:mb-28"
       >
         <motion.h2 
-          className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-brand via-accent to-secondary bg-clip-text text-transparent"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-brand via-accent to-secondary bg-clip-text text-transparent"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -265,7 +265,7 @@ export function EnhancedTimeline() {
         >
           L&apos;Épopée de Jemima
         </motion.h2>
-        <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto font-light">
           Construire l&apos;Avenir, Pas à Pas
         </p>
         <motion.div
@@ -273,17 +273,17 @@ export function EnhancedTimeline() {
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-6 mx-auto max-w-xs"
+          className="mt-8 mx-auto max-w-sm"
         >
           <Separator className="bg-gradient-to-r from-transparent via-brand to-transparent h-1" />
         </motion.div>
-        <p className="text-brand font-semibold mt-4 text-lg">
+        <p className="text-brand font-bold mt-6 text-xl md:text-2xl">
           « C&apos;est en forgeant qu&apos;on devient forgeron »
         </p>
       </motion.div>
 
       {/* Timeline Items */}
-      <div className="space-y-16 md:space-y-24">
+      <div className="space-y-20 md:space-y-28">
         {timelineSteps.map((step, index) => (
           <TimelineItem
             key={index}
@@ -300,14 +300,14 @@ export function EnhancedTimeline() {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.3 }}
-        className="mt-20"
+        className="mt-24 md:mt-28"
       >
-        <Card className="text-center bg-gradient-to-br from-brand/10 via-accent/10 to-secondary/10 border-2 border-brand/30">
-          <CardContent className="pt-6">
-            <p className="text-xl md:text-2xl font-semibold text-brand mb-2">
+        <Card className="text-center bg-gradient-to-br from-brand/10 via-accent/10 to-secondary/10 border-2 border-brand/30 shadow-2xl">
+          <CardContent className="pt-10 pb-10">
+            <p className="text-2xl md:text-3xl font-semibold text-brand mb-4">
               Parce que l&apos;avenir, on ne l&apos;attend pas…
             </p>
-            <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-brand via-accent to-secondary bg-clip-text text-transparent">
+            <p className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-brand via-accent to-secondary bg-clip-text text-transparent">
               On le crée, Ensemble. 🌟
             </p>
           </CardContent>
