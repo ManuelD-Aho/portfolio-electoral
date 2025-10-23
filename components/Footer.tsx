@@ -40,22 +40,6 @@ export function Footer() {
                 Programme
               </Link>
             </li>
-            <li>
-              <Link 
-                href="/sengager"
-                className="text-neutral-600 dark:text-neutral-400 hover:text-brand dark:hover:text-brand transition-colors"
-              >
-                S&apos;engager
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="/contact"
-                className="text-neutral-600 dark:text-neutral-400 hover:text-brand dark:hover:text-brand transition-colors"
-              >
-                Contact
-              </Link>
-            </li>
           </ul>
         </motion.div>
 

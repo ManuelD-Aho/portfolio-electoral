@@ -70,9 +70,6 @@ export default function Home() {
                 <Button asChild size="lg" variant="default" className="w-full sm:w-auto">
                   <Link href="/programme">Voir le Programme</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-                  <Link href="/sengager">S&apos;engager</Link>
-                </Button>
                 <Button asChild size="lg" variant="secondary" className="w-full sm:w-auto">
                   <Link href="#vote">Voter Jemima le 25 Octobre</Link>
                 </Button>
