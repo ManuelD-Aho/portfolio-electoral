@@ -102,7 +102,7 @@ export default function Home() {
 
       <Section title="Bien plus qu'un programme, une vision" subtitle="Une stratégie collective sur l'autoroute du succès.">
         <motion.div 
-          className="grid md:grid-cols-3 gap-6"
+          className="grid md:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -118,7 +118,7 @@ export default function Home() {
           ))}
         </motion.div>
         <motion.div 
-          className="mt-8"
+          className="mt-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -131,9 +131,9 @@ export default function Home() {
       </Section>
 
       <Section title="Qui suis-je ?" subtitle="C'est en forgeant qu'on devient forgeron">
-        <div className="grid md:grid-cols-2 gap-10 items-start">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
           <motion.div 
-            className="space-y-4 text-neutral-600 dark:text-neutral-300"
+            className="space-y-6 text-neutral-600 dark:text-neutral-400 leading-relaxed"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -240,7 +240,7 @@ export default function Home() {
             </motion.p>
           </motion.div>
           <motion.div 
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-2 gap-6"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -254,12 +254,12 @@ export default function Home() {
             ].map((item, index) => (
               <motion.div
                 key={item.title}
-                className="card hover:shadow-xl transition-shadow"
+                className="card hover:shadow-lg transition-shadow p-6"
                 variants={itemVariants}
               >
-                <div className="text-3xl mb-2">{item.icon}</div>
-                <h4 className="font-semibold text-lg mb-1">{item.title}</h4>
-                <p className="text-sm text-neutral-600 dark:text-neutral-400">{item.desc}</p>
+                <div className="text-4xl mb-3">{item.icon}</div>
+                <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </motion.div>
