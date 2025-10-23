@@ -6,9 +6,7 @@ import Link from 'next/link'
 import { site } from '@/lib/site'
 import { Section } from '@/components/Section'
 import { IssueCard } from '@/components/IssueCard'
-import { Newsletter } from '@/components/Newsletter'
 import { EnhancedTimeline } from '@/components/EnhancedTimeline'
-import { HorizontalTimeline } from '@/components/HorizontalTimeline'
 import { Button } from '@/components/ui/button'
 import { issues } from '@/data/issues'
 import { StatGroup } from '@/components/Stat'
@@ -40,32 +38,32 @@ export default function Home() {
 
   return (
     <>
-      <section className="relative overflow-hidden min-h-[85vh] md:min-h-0">
+      <section className="relative overflow-hidden min-h-[90vh] md:min-h-[85vh] flex items-center">
         <div className="absolute inset-0 bg-mesh pointer-events-none" />
-        <div className="container py-16 md:py-20 lg:py-28">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
+        <div className="container py-20 md:py-24 lg:py-28">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <motion.div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
             >
               <motion.h1
-                  className="h1 text-glow text-4xl md:text-5xl lg:text-6xl"
+                  className="h1 text-glow text-4xl md:text-5xl lg:text-7xl mb-6"
                   variants={itemVariants}>
                 {site.candidate.fullName}
               </motion.h1>
               <motion.p 
-                className="lead mt-4 text-base md:text-lg"
+                className="lead mt-6 text-lg md:text-xl lg:text-2xl"
                 variants={itemVariants}>
                 {site.candidate.slogan}
               </motion.p>
               <motion.p 
-                className="text-lg md:text-xl mt-2 text-brand font-semibold"
+                className="text-xl md:text-2xl mt-4 text-brand font-semibold"
                 variants={itemVariants}>
                 Ensemble. 🌟
               </motion.p>
               <motion.div 
-                className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3"
+                className="mt-10 flex flex-col sm:flex-row flex-wrap gap-4"
                 variants={itemVariants}>
                 <Button asChild size="lg" variant="default" className="w-full sm:w-auto">
                   <Link href="/programme">Voir le Programme</Link>
@@ -75,7 +73,7 @@ export default function Home() {
                 </Button>
               </motion.div>
               <motion.div variants={itemVariants}>
-                <StatGroup className="mt-10" />
+                <StatGroup className="mt-12" />
               </motion.div>
             </motion.div>
             <motion.div 
@@ -104,7 +102,7 @@ export default function Home() {
 
       <Section title="Bien plus qu'un programme, une vision" subtitle="Une stratégie collective sur l'autoroute du succès.">
         <motion.div 
-          className="grid md:grid-cols-3 gap-6"
+          className="grid md:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -120,7 +118,7 @@ export default function Home() {
           ))}
         </motion.div>
         <motion.div 
-          className="mt-8"
+          className="mt-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -133,9 +131,9 @@ export default function Home() {
       </Section>
 
       <Section title="Qui suis-je ?" subtitle="C'est en forgeant qu'on devient forgeron">
-        <div className="grid md:grid-cols-2 gap-10 items-start">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
           <motion.div 
-            className="space-y-4 text-neutral-600 dark:text-neutral-300"
+            className="space-y-6 text-neutral-600 dark:text-neutral-400 leading-relaxed"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -242,7 +240,7 @@ export default function Home() {
             </motion.p>
           </motion.div>
           <motion.div 
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-2 gap-6"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -256,12 +254,12 @@ export default function Home() {
             ].map((item, index) => (
               <motion.div
                 key={item.title}
-                className="card hover:shadow-xl transition-shadow"
+                className="card hover:shadow-lg transition-shadow p-6"
                 variants={itemVariants}
               >
-                <div className="text-3xl mb-2">{item.icon}</div>
-                <h4 className="font-semibold text-lg mb-1">{item.title}</h4>
-                <p className="text-sm text-neutral-600 dark:text-neutral-400">{item.desc}</p>
+                <div className="text-4xl mb-3">{item.icon}</div>
+                <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -270,14 +268,6 @@ export default function Home() {
 
       <Section className="bg-neutral-50 dark:bg-neutral-900/50">
         <EnhancedTimeline />
-      </Section>
-
-      <Section className="bg-gradient-to-br from-brand/5 via-accent/5 to-secondary/5">
-        <HorizontalTimeline />
-      </Section>
-
-      <Section title="Restons Connectés" subtitle="Rejoignez le mouvement pour une MIAGE dynamique et unie.">
-        <Newsletter />
       </Section>
     </>
   )

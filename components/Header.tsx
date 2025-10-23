@@ -34,42 +34,31 @@ export function Header() {
     <motion.header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-white/80 dark:bg-neutral-950/80 backdrop-blur-2xl border-b border-neutral-200/80 dark:border-neutral-800/80 shadow-sm' 
-          : 'bg-transparent'
+          ? 'bg-white/95 dark:bg-neutral-950/95 backdrop-blur-xl border-b border-neutral-200/60 dark:border-neutral-800/60 shadow-sm' 
+          : 'bg-white/80 dark:bg-neutral-950/80 backdrop-blur-xl border-b border-neutral-200/40 dark:border-neutral-800/40'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       <div className="container">
-        <div className="flex items-center justify-between h-14 md:h-16">
-          {/* Logo - Vercel Style */}
-          <Link href="/" className="flex items-center gap-2 group">
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Logo - Clean minimal style */}
+          <Link href="/" className="flex items-center gap-3 group">
             <motion.div 
-              className="relative h-8 w-8 rounded-lg overflow-hidden bg-gradient-to-br from-brand via-accent to-secondary"
+              className="relative h-10 w-10 rounded-lg overflow-hidden bg-gradient-to-br from-brand via-accent to-secondary flex items-center justify-center"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              <motion.div 
-                className="absolute inset-0 bg-white/20"
-                animate={{ 
-                  scale: [1, 1.2, 1],
-                  opacity: [0.3, 0.6, 0.3]
-                }}
-                transition={{ 
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
+              <span className="text-white font-bold text-lg">J</span>
             </motion.div>
-            <span className="font-semibold text-sm hidden sm:inline-block group-hover:text-brand transition-colors">
-              Jemima IRIÉ
+            <span className="font-semibold text-base hidden sm:inline-block group-hover:text-brand transition-colors">
+              Jemima
             </span>
           </Link>
 
-          {/* Desktop Navigation - Vercel Style */}
-          <nav className="hidden md:flex items-center gap-1">
+          {/* Desktop Navigation - Clean minimal style */}
+          <nav className="hidden md:flex items-center gap-2">
             {navItems.map((item) => {
               const Icon = item.icon
               const isActive = pathname === item.href
@@ -80,10 +69,10 @@ export function Header() {
                   className="relative"
                 >
                   <motion.div
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                    className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       isActive
-                        ? 'text-neutral-900 dark:text-white'
-                        : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
+                        ? 'text-brand bg-brand/5'
+                        : 'text-neutral-700 dark:text-neutral-300 hover:text-brand hover:bg-neutral-50 dark:hover:bg-neutral-900'
                     }`}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -91,24 +80,13 @@ export function Header() {
                     <Icon className="h-4 w-4" />
                     <span>{item.label}</span>
                   </motion.div>
-                  {isActive && (
-                    <motion.div
-                      layoutId="navbar-indicator"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-brand to-accent rounded-full"
-                      transition={{ 
-                        type: "spring", 
-                        stiffness: 500, 
-                        damping: 40
-                      }}
-                    />
-                  )}
                 </Link>
               )
             })}
           </nav>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <ThemeToggle />
             <motion.div
               className="hidden sm:block"
@@ -117,7 +95,7 @@ export function Header() {
             >
               <Link 
                 href="#vote" 
-                className="inline-flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-white bg-gradient-to-r from-brand to-accent rounded-md shadow-sm hover:shadow-md transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2 text-sm font-medium text-white bg-gradient-to-r from-brand to-accent rounded-lg shadow-sm hover:shadow-md transition-all"
               >
                 <Vote className="h-4 w-4" />
                 Voter le 25 Oct
@@ -127,7 +105,7 @@ export function Header() {
             {/* Mobile Menu Button */}
             <motion.button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden h-9 w-9 rounded-md grid place-items-center hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+              className="md:hidden h-10 w-10 rounded-lg grid place-items-center hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
               aria-label="Toggle menu"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -160,7 +138,7 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu - App Style */}
+      {/* Mobile Menu - Clean minimal style */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -168,9 +146,9 @@ export function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="md:hidden border-t border-neutral-200/80 dark:border-neutral-800/80 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-2xl overflow-hidden"
+            className="md:hidden border-t border-neutral-200/60 dark:border-neutral-800/60 bg-white/98 dark:bg-neutral-950/98 backdrop-blur-xl overflow-hidden"
           >
-            <nav className="container py-3">
+            <nav className="container py-4 space-y-1">
               {navItems.map((item, index) => {
                 const Icon = item.icon
                 const isActive = pathname === item.href
@@ -189,8 +167,8 @@ export function Header() {
                       href={item.href}
                       className={`flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                         isActive
-                          ? 'bg-gradient-to-r from-brand to-accent text-white'
-                          : 'text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800'
+                          ? 'bg-brand text-white'
+                          : 'text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-900'
                       }`}
                     >
                       <Icon className="h-5 w-5" />
@@ -204,11 +182,11 @@ export function Header() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ delay: navItems.length * 0.05, duration: 0.2 }}
-                className="mt-2"
+                className="pt-2"
               >
                 <Link 
                   href="#vote" 
-                  className="flex items-center gap-3 px-4 py-3 text-sm font-medium text-white bg-gradient-to-r from-brand to-accent rounded-lg shadow-md"
+                  className="flex items-center gap-3 px-4 py-3 text-sm font-medium text-white bg-gradient-to-r from-brand to-accent rounded-lg shadow-sm"
                 >
                   <Vote className="h-5 w-5" />
                   Voter le 25 Oct

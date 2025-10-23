@@ -16,10 +16,10 @@ export function Section({
   className?: string
 }) {
   return (
-    <section className={clsx('container py-16 md:py-20', className)}>
+    <section className={clsx('container py-20 md:py-28 lg:py-32', className)}>
       {(title || subtitle) && (
         <motion.div 
-          className="mb-10 text-center"
+          className="mb-16 md:mb-20 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -27,7 +27,7 @@ export function Section({
         >
           {title && (
             <motion.h2 
-              className="h2 bg-gradient-to-r from-brand via-accent to-secondary bg-clip-text text-transparent"
+              className="h2 bg-gradient-to-r from-brand via-accent to-secondary bg-clip-text text-transparent mb-4"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -38,7 +38,7 @@ export function Section({
           )}
           {subtitle && (
             <motion.p 
-              className="lead mt-3 max-w-2xl mx-auto"
+              className="lead mt-4 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
