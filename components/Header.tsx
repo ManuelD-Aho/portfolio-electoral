@@ -9,9 +9,7 @@ import { site } from '@/lib/site'
 import { ThemeToggle } from './ThemeToggle'
 
 const navItems = [
-  { href: '/programme', label: 'Programme' },
-  { href: '/sengager', label: "S'engager" },
-  { href: '/contact', label: 'Contact' }
+  { href: '/programme', label: 'Programme' }
 ]
 
 export function Header() {
